@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #9face6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #6a5acd;
+            outline: none;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #6a5acd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #483d8b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+
+        <form>
+            <label>Full Name:</label>
+            <input type="text" name="fullname">
+
+            <label>Email:</label>
+            <input type="email" name="email">
+
+            <label>Password:</label>
+            <input type="password" name="password">
+
+            <label>Gender:</label><br>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <br><br>
+
+            <label>Course:</label>
+            <select>
+                <option>BCA</option>
+                <option>BSc</option>
+                <option>BCom</option>
+                <option>MCA</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>

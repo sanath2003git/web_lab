@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Name validation
+            if(name == "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+
+            // Email validation using JavaScript
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if(!email.match(emailPattern)) {
+                alert("Please enter a valid Email address");
+                return false;
+            }
+
+            // Password validation
+            if(password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:<br>
+    <input type="text" id="name"><br><br>
+
+    Email:<br>
+    <input type="text" id="email"><br><br>
+
+    Password:<br>
+    <input type="password" id="password"><br><br>
+
+    Gender:<br>
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+    <br><br>
+
+    Course:<br>
+    <select>
+        <option>BCA</option>
+        <option>BSc</option>
+        <option>BCom</option>
+    </select>
+
+    <br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>

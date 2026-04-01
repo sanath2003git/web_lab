@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse Hover Event</title>
+
+<script>
+function showContent() {
+    document.getElementById("image").src = "https://via.placeholder.com/200/00ff00";
+    document.getElementById("text").innerHTML = "Welcome! You hovered over the image.";
+}
+
+function hideContent() {
+    document.getElementById("image").src = "https://via.placeholder.com/200";
+    document.getElementById("text").innerHTML = "Move your mouse over the image.";
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Mouse Hover Example</h2>
+
+<p id="text">Move your mouse over the image.</p>
+
+<img id="image"
+     src="https://via.placeholder.com/200"
+     onmouseover="showContent()"
+     onmouseout="hideContent()"
+     width="200" height="200">
+
+</body>
+</html>
